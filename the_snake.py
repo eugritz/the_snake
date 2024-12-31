@@ -1,4 +1,5 @@
 from random import randint
+from typing import Optional
 
 import pygame
 from pygame import Rect
@@ -95,7 +96,7 @@ class Apple(GameObject):
 class Snake(GameObject):
     """Игровой объект - змейка."""
 
-    next_direction: tuple[int, int] | None
+    next_direction: Optional[tuple[int, int]]
 
     def __init__(self, head_position: tuple[int, int] = (0, 0)):
         """Конструктор класса Snake."""
